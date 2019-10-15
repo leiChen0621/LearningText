@@ -1,0 +1,28 @@
+html学习笔记
+1、DOM（文档对象模型）：
+   javaScript通过调优HTML DOM的接口来访问和操作HTML元素；
+   HTML DOM树：
+                  Document
+                     |
+                Root Element
+                   <html>
+                 -----------
+                 |         |
+               Element    Element
+               <head>     <body>--------
+                  |          |         |
+               Element    Element   Element------Attribute
+               <title>      <h1>      <a>        "href"
+                  |          |         |
+                 Text       Text      Text
+              "My title" "My Header" "My link"
+ DOM树里的节点包括：Document、Root Element、Element、Attribute、Text。通过DOM模型，javascript可以创建动态的HTML。
+ 1）JavaScript能够改变页面中所有的HTML元素；
+ 2）JavaScript能够改变页面中所有的HTML属性；
+ 3）JavaScript能够改变页面中所有的CSS样式；
+ 4）JavaScript能够对页面中所有的事件作出反应；
+2、如何找到html元素
+   通过id、标签名、类名
+   var obj1 = docment.getElementById("myid");//根据id找到元素，返回对象obj1
+   var obj2 = obj1.getElementByTagName("p");//根据元素名找到元素对象
+   var obj3 = document.getElementByClassName("className");//根据类名找到元素对象
