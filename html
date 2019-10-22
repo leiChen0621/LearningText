@@ -22,7 +22,18 @@ html学习笔记
  3）JavaScript能够改变页面中所有的CSS样式；
  4）JavaScript能够对页面中所有的事件作出反应；
 2、如何找到html元素
-   通过id、标签名、类名
-   var obj1 = docment.getElementById("myid");//根据id找到元素，返回对象obj1
-   var obj2 = obj1.getElementByTagName("p");//根据元素名找到元素对象
-   var obj3 = document.getElementByClassName("className");//根据类名找到元素对象
+   1）通过id、标签名、类名、name属性：
+   var obj1 = docment.getElementById("myid");//根据id找到元素，返回对象obj1,仅document对象使用
+   var obj2 = obj1.getElementsByTagName("p");//根据元素名找到元素对象，document和element对象都可以使用
+   var obj3 = document.getElementsByClassName("className");//根据类名找到元素对象
+   var obj4 = document.getElementsByName(name);//根据元素名臣，返回元素对象，通常表单元素才有name属性,仅document对象使用。
+   2）节点指针索引，通过element对象调用
+   element.childNodes      element.children
+   element.lastChild       element.lastElementChild
+   element.firstChild      element.firstElementChild
+   element.previousSibling element.previousElementSibling
+   element.nextSibling     element.nextElementSibling
+   element.parentNode      element.parentElement
+   左面返回的结果里包含了所有非元素节点，包括元素前后的空text节点，右边仅返回元素节点。
+   
+   
